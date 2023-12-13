@@ -1,0 +1,74 @@
+           <!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>설문조사 양식</title>
+</head>
+<body>
+    <header>
+        <h1>설문조사 양식</h1>
+        <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+    </header>
+    <hr>
+    <fieldset>
+        <legend>개인정보</legend>
+        <label for="name">이름</label>
+        <input type="text" id="name">
+        <br>
+        <label for="email">이메일 주소</label>     
+        <input type="email" id="email">
+    </fieldset>
+    <fieldset>
+        <legend>설문</legend>
+        <p>연령대가 어떻게 되십니까?</p>       
+        <input type="radio" id="teen" name="age">
+        <label for="teen">10대</label>
+        <input type="radio" id="twenty" name="age">
+        <label for="twenty">20대</label>
+        <input type="radio" id="thirty" name="age">
+        <label for="thirty">30대</label>
+        <input type="radio" id="fourty" name="age">
+        <label for="fourty">40대</label>
+        <input type="radio" id="fifty" name="age">
+        <label for="fifty">50대</label> 
+        <input type="radio" id="other" name="age">
+        <label for="other">그 외</label>
+        <br>
+
+        <p>학원을 선택할 때 가장 중요하게 생각하는 것은 무엇입니까? 모두 고르시오. </p>
+        <input type="checkbox" id="location" name="academy">
+        <label for="location">위치</label>
+        <input type="checkbox" id="price" name="academy">
+        <label for="price">학원비</label>
+        <input type="checkbox" id="lecturer" name="academy">
+        <label for="lecturer">강사</label>
+        <input type="checkbox" id="infra" name="academy">
+        <label for="infra">시설</label>
+    
+         <!--질문 추가 과제 231208-->
+         <p>현재 학원과 유사한 종류의 학원을 다녔던 경험이 있나요? 있다면 기간을 선택해주세요.</p>
+         <input type="radio" id="none" name="experience">
+         <label for="none">없다</label>
+         <input type="radio" id="lessthan1yr" name="experience">
+         <label for="lessthan1yr">1년 미만</label>
+         <input type="radio" id="over1yr" name="experience">
+         <label for="over1yr">1년 이상</label>
+         <input type="radio" id="over2yrs" name="experience">
+         <label for="over2yrs">2년 이상</label>
+         <input type="radio" id="over3yrs" name="experience">
+         <label for="over3yrs">3년 이상</label>
+         <input type="radio" id="other" name="experience">
+         <label for="other">기타</label> 
+         <input type="text" id=other cols="1" rows="2" name="experience">
+    </fieldset>
+    <fieldset>
+        <legend>기타 의견</legend>
+        <textarea cols="30" rows="3" name="comment"></textarea>
+    </fieldset>
+    
+    <input type="submit">
+    <hr>
+    <p>입력하느라 수고하셨습니다.</p>
+</body>
+</html>
