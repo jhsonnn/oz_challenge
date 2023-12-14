@@ -2,47 +2,56 @@ body{
     margin: 20px;
 }
 table{
-    width: 400px;
-    height: 900px;
-    border: 3px solid black;
-}
-.container > .first{
-    border: 3px solid black;
-}
-.first{
-    height: 500x;
-    width: 100%;
+    width: 540px;
+    height: 850px;
+    border: 4px solid black;
+    padding: 10px;
     border-spacing: 0px;
-    border: 3px solid black;
+}
+tr, td{
+    border-collapse: collapse;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
 }
 .first__row01{
-    width: 330px;
-}
-.first__row02{
-    width: 330px;
+    height: 25px;
 }
 #day{
     width: 120px;
     float: left;
-    padding-left: 30px;
+    height:25px;
 }
+#day > p{
+    margin:0;
+    margin-top: 5px;
+    padding-left: 10px;
+} 
 #weather{
-    width: 300px;
+    width: 385px;
+    padding-left: 10px;
     float: right;
+    height: 25px;
+}
+#weather > p{
+    display: inline;
 }
 #title{
-    width: 300px;
-    padding-left: 30px;
+    padding-left: 10px;
+    text-decoration: underline;
 }
 #img{
     width: 520px;
 }
 .second{
+    padding-top: 10px;
+    padding-left: 2px;
     height: 280px;
     display: grid;
     grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
     grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
-    border: 1px black;
+    border: 3px black;
 }
 .second > td{
     padding-top: 10px;
