@@ -1,0 +1,97 @@
+body{
+    width: 550px;
+    height: 750px;
+    box-sizing: border-box;
+}
+.container{
+    height: 700px;
+    text-align: center;
+    border: 3px double green;
+    background-color: rgb(231, 224, 171);
+}
+.title{
+    width: 450px;
+    height: 40px;
+    border: 3px double green;
+    background-color: rgba(112, 206, 164, 0.479);
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.title > p{
+    font-size: 28px;
+    font-weight: bold;
+    color: green;
+    margin: 0;
+    padding-top: 5px;
+}
+.main{
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-spacing: 20px;
+}
+.tb{
+    border-spacing: 10px;
+}
+.weather{
+    width: 400px;
+    height: 20x;
+    border: 3px double green;
+    font-size: 12px;
+    color: green;
+}
+
+.date{
+    float: right;
+    margin: 0;
+    display: inline-block;
+    margin-right: 10px;
+}
+.feeling{
+    margin: 0;
+    display: inline-block;
+    justify-content: flex-start;
+    margin-left: 190px;
+}
+.range{
+    margin: 0;
+    display: inline-block;
+    justify-content: flex-end;
+    float: right;
+    margin-right: 10px;
+}
+
+#pic_container{
+    width: 400px;
+    height: 300px;
+    border: 3px double green;
+}
+#pic{
+    width: 300px;
+    height: 300px;
+}
+#content{
+    width: 400px;
+    height: 150px;
+    border: 3px double green;
+}
+#content > p{
+    text-align: center;
+    font-size: 13px;
+    color: green;
+}
+p > strong{
+    font-size: 15px;
+    color: blue;
+}
+p > q{
+    font-size: 16px;
+    color: orange;
+}
+footer > p{
+    
+    font-size: 13px;
+    margin-top: 30px;
+    color: rgb(72, 163, 72);
+}
