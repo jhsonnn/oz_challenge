@@ -1,0 +1,50 @@
+body{
+    margin: 20px;
+}
+table{
+    width: 400px;
+    height: 900px;
+    border: 3px solid black;
+}
+.container > .first{
+    border: 3px solid black;
+}
+.first{
+    height: 500x;
+    width: 100%;
+    border-spacing: 0px;
+    border: 3px solid black;
+}
+.first__row01{
+    width: 330px;
+}
+.first__row02{
+    width: 330px;
+}
+#day{
+    width: 120px;
+    float: left;
+    padding-left: 30px;
+}
+#weather{
+    width: 300px;
+    float: right;
+}
+#title{
+    width: 300px;
+    padding-left: 30px;
+}
+#img{
+    width: 520px;
+}
+.second{
+    height: 280px;
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
+    border: 1px black;
+}
+.second > td{
+    padding-top: 10px;
+    text-align: center;
+}
