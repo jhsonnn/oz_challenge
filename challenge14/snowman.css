@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    background-color: skyblue;
+    margin: auto;
+}
+body{
+    width: 1000px;
+    height: 800px;
+}
+main{
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    position: relative;
+    margin: 0;
+}
+.middle_top, .left_part{
+    z-index: 2;
+    margin: 0;
+}
+.middle_bottom, .right_part{
+    z-index: 1;
+    margin: 0;
+}
+.hat{
+    position: absolute;
+    margin: 0;
+}
+.middle_bottom{
+    transform: translate(50px, 300px);
+}
+.hat_top{
+    width: 40px;
+    height:10px;
+    background-color: black;
+    transform: translate(228px, 75px);
+    margin: 0;
+}
+.hat_bottom{
+    width: 30px;
+    height: 20px;
+    background-color: black;
+    transform:translate(233px, 50px);
+    margin:0;
+}
+.head{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+    margin:0;
+    transform: translate(163px, -70px);
+}
+.body_{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0;
+    transform:translate(149px, -70px);
+}
+.leg{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(136px, -70px);
+}
+.left_hand{
+    width: 80px;
+    height: 5px;
+    background-color: brown;
+    transform: translate(222px, 140px) rotate(45deg);
+}
+.right_hand{
+    width: 80px;
+    height: 5px;
+    background-color: brown;
+    transform: translate(145px, 140px) rotate(135deg);
+
+}
+.upper{
+    z-index: 2;
+}
+.left_eye{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-330px, 140px);
+}
+.right_eye{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-303px, 131.8px);
+}
+.mouth{
+    width: 20px;
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+    background-color: black;
+    transform: translate(-315px, 140px);
+}
+.button01{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-315px, 170px);
+}
+.button02{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-315px, 185px);
+}
+.button03{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-315px, 200px);
+}
