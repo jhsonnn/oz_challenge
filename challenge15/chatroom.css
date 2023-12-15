@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+.container{
+    height: 100%;
+    background-size: contain;
+    background-image: url(images/back.jpeg);
+}
+.chat_upper{
+    height: calc(100% - 120px);
+}
+.user{
+    background-color: white;
+    padding: 15px;
+    height: 70px;
+}
+.user_column{
+    float: left;
+}
+.pic{
+    width: 53px;
+    height: 53px;
+    background-color: transparent;
+    border: 1px solid gray;
+    margin-right: 20px;
+    border-radius: 20px;
+    margin: 0;
+}
+.img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.nick_name, .friend_count{
+    margin: 6px;
+    font-family: 'Gamja Flower', sans-serif;
+}
+.friend_count{
+    font-size: 13px;
+    color: gray;
+}
+
+.chat_field{
+    height: 120px;
+    background-color: white;
+}
+.send_field{
+    height: 120px;
+}
+.text_field{
+    width: calc(100% -120px);
+    height: 120px;
+    border: none;
+    resize: none;
+
+    font-size: 18px;
+    padding: 10px;
+    float: left;
+}
+.send_button{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #F9E000;
+    font-size: 16px;
+}
+.text_field:focus{
+    outline-color: rgba(0, 255, 255, 0.454);
+}
+.send_button:active{
+    background-color:rgba(0, 255, 255, 0.454);
+    font-size: 25px;
+    font-family: 'Gamja Flower', sans-serif;
+}
