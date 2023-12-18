@@ -26,8 +26,8 @@ body{
     /* 전체에서 채팅 입력창 만큼의 크기를 제외하고 */
     /* 내가 속한 영역의 전체 - 120px */
     height: calc(100% - 120px);
+    overflow-y: scroll;
 }
-
 /* 유저정보 표시되는 부분 */
 .user{
     background-color: #FFFFFF;

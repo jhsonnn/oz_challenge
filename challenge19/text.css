@@ -23,7 +23,7 @@
     left: 20px;
 }
 /* 의사요소 추가로 말풍선 꼬리 만들기 */
-.chat-screen__texts > .text::after{
+.chat-friend > .text01::after{
     content: "";
     /* 삼각형 만들기 ; 박스만들어서 대각선으로 잘라줌 */
     /* border의 우측면을 만듦 */
@@ -45,7 +45,36 @@
 }
  /* 꼬리부분 색 변화 */
  /* 마우스가 얹어진 부분의 의사요소 */
- .chat-screen__texts > .text:hover::after{
+ .chat-friend > .text01:hover::after{
     border-right: 16px solid #1c9352;
     transition: border-right 1500ms 200ms ease-in;
- } 
+ }
+
+
+
+
+ /* chat-me 파트 말풍선 */
+ .chat-me > .text02::before{
+    content: "";
+    /* 삼각형 만들기 ; 박스만들어서 대각선으로 잘라줌 */
+    /* border의 우측면을 만듦 */
+    border-left: 16px solid #34d27b;
+    /* 위치이동 */
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    /* 1. 개발자 도구로 확인하면 height가 없는 16*0 상태로 만들어짐 */
+     /* 2. 사각형 자르기; transparent */
+    border-bottom: 16px solid transparent;
+}
+
+ /* 꼬리부분 색 변화 */
+ /* 마우스가 얹어진 부분의 의사요소 */
+ .chat-me > .text02:hover::before{
+    border-left: 16px solid #1c9352;
+    transition: border-left 1500ms 200ms ease-in;
+ }
+
+ .chat-me{
+    padding-left: 230px;
+ }
