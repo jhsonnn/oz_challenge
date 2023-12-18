@@ -1,0 +1,51 @@
+/* 말풍선 전용 */
+.chat-screen__texts{
+    padding: 0;
+    /* ul 태그의 경우 자동으로 li 앞에 점이 생기므로 이걸 없앰 */
+    list-style-type: none;
+}
+.chat-screen__texts > .text{
+    background-color: #34d27b;
+    /* 블록이기 때문에 너비 높이 정의 */
+    width: 280px;
+    height: 50px;
+    /* li 두개가 붙어있어서 margin을 밑에만 추가 */
+    margin: 0 0 10px 0;
+    /* 텍스트가 말풍선에 붙어 있어서 padding 추가 */
+    padding: 10px;
+    border-radius: 8px;
+    /* line-height ; 행 높이 
+    30px ; 말풍선 높이 50px - padding 10px * 2
+    */
+    line-height: 30px;
+    /* 왼쪽에 붙어있는 말풍선 오른쪽으로 이동 */
+    position: relative;
+    left: 20px;
+}
+/* 의사요소 추가로 말풍선 꼬리 만들기 */
+.chat-screen__texts > .text::after{
+    content: "";
+    /* 삼각형 만들기 ; 박스만들어서 대각선으로 잘라줌 */
+    /* border의 우측면을 만듦 */
+    border-right: 16px solid #34d27b;
+    /* 위치이동 */
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    /* 1. 개발자 도구로 확인하면 height가 없는 16*0 상태로 만들어짐 */
+     /* 2. 사각형 자르기; transparent */
+    border-bottom: 16px solid transparent;
+}
+/* 동적인 부분 추가 */
+.chat-screen__texts > .text:hover{
+    /* 마우스 얹은 부분만 진한 초록 */
+    background-color: #1c9352;
+    /* 천천히 적용 1.5초 걸리고, 0.2초 딜레이, 애니메이션 속도 점차 증가*/
+    transition: background-color 1500ms 200ms ease-in;
+}
+ /* 꼬리부분 색 변화 */
+ /* 마우스가 얹어진 부분의 의사요소 */
+ .chat-screen__texts > .text:hover::after{
+    border-right: 16px solid #1c9352;
+    transition: border-right 1500ms 200ms ease-in;
+ } 

@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+}
+@media screen and (min-width: 550px){
+    .ul-container{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    .ul-menu{
+        padding: 20px;
+        color: white;
+    }
+    .home{
+        background-color: green;
+    }
+    .burger-bar{
+        display: none;
+    }
+}
+.burger-bar>.burger-img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 225px;
+    display: block;
+}
+
+@media screen and (max-width: 550px){
+
+    .ul-container{
+        display: none;
+    }
+    .burger-img:active{
+        .burger-bar{
+            display: none;
+        }
+        .nav >.ul-container{
+            display: block; 
+            width: 100%;
+            height: 500px;
+        }
+        .ul-container{
+            display:visible;
+            list-style-type: none;
+            /* position: relative;
+            display: inline; */
+            list-style-type: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        .ul-menu{
+            padding: 20px;
+            color: white;
+        }
+        .home{
+            background-color: green;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+/* 전체적인 세팅부터 */
+*{
+    /* width나 height가 정해지면, 
+    padding이나 border는 그 안에서만 커진다. */
+    box-sizing: border-box;
+}
+html{
+    /* 자기가 속한 영역을 기준으로 백분율 계산 
+    즉, html이 속한 영역은 웹 브라우저 영역이므로 
+    100% 라는 뜻은 이 화면을 꽉 채운다는 의미*/
+    height: 100%;
+}
+body{
+    height: 100%;
+    /* html 기본 세팅으로 margin이 살짝 있는데 이걸 제거 */
+    /* 0px을 쓸 때는 px 생략 가능=> 단위가 0이므로 */
+    margin: 0;
+}
+.container{
+    height: 100%;
+    background-color: #FEE500;
+}
+
+/* 스크린 크기 조정 */
+.chat-screen{
+    /* 전체에서 채팅 입력창 만큼의 크기를 제외하고 */
+    /* 내가 속한 영역의 전체 - 120px */
+    height: calc(100% - 120px);
+}
+
+/* 유저정보 표시되는 부분 */
+.user{
+    background-color: #FFFFFF;
+    padding: 16px;
+    height: 80px;
+}
+/* user__pic, user__nick, user__count는 모두 block이기 때문에
+    옆으로 나란히 붙일 수 없다. 따라서 float을 사용해서 옆으로 붙임
+*/
+.user__column{
+    float: left;
+}
+.user__pic{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #FEE500;
+}
+.user__nick, .user__count{
+    /* 마진이 조금 커서 user__pic과의 높이가 맞지 않음 */
+    margin: 5px;
+}
+.user__count{
+    font-size: 12px;
+    color: gray;
+}
+
+/* 채팅 입력창 */
+.chat-form{
+    height: 120px;
+    background-color: white;
+}
+.chat-form__field{
+    height: 120px;
+}
+.chat-form__msg{
+    float: left;
+    width: calc(100% - 120px);
+    height: 120px;
+    border: none;
+    /* 채팅창 사이즈 조절 가능한 것 막기 */
+    resize: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* 전송 버튼 */
+.chat-form__bt{
+    /* chat-form__msg와 chat-form__bt 높이는 동일한데
+    옆으로 나란히 붙어서 렌더링이 안됨
+    이유는 서로 렌더링 방식이 달라서 일어나는 일
+    따라서 float을 이용해서 붙여준다.
+    */
+    float: right;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #FEE500;
+    font-size: 18px;
+}
+
+
+/* 의사 클래스 */
+.chat-form__msg:focus{
+    /* 텍스트 입력하려고 마우스 가져다 대면(focus 상태) 윤곽선이 생김
+    =>이걸 css 에서는 'outline' 이라고 함 */
+    outline:none;
+}
+.chat-form__bt:active{
+    background-color: #FEE101;
+}
