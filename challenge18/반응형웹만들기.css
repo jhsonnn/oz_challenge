@@ -21,7 +21,6 @@ body{
         height: 100%;
         text-align: center;
         background-color: skyblue;
-        
     }
     .first, .second, .third, .fourth, .fifth{
         display: none;
