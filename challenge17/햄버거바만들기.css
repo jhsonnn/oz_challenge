@@ -1,70 +1,87 @@
-body{
-    margin: 0;
+html{
+    box-sizing: border-box;
 }
-@media screen and (min-width: 550px){
-    .burger-img{
-        display: none;
-    }
-    .nav-bar{
-        display: block;
-    }
-}
-.ul-container{
-    list-style-type: none;
+/* 메뉴 */
+.nav-bar{
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
     margin: 0;
     padding: 0;
     background-color: black;
 }
-.ul-menu{
+.nav-bar ul{
+    display: flex;
+    list-style-type: none;
+}
+.nav-bar .ul-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-bar .ul-menu{
     padding: 20px;
     color: white;
 }
-.home{
+.ul-container .home{
     background-color: green;
+}
+
+
+
+.burger-bar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 .burger-img{
     width: 30px;
     height: 30px;
-    position: relative;
-    left: 50%;
+    cursor: pointer;
+    display: flex;
 }
 
-@media screen and (max-width: 550px){
-    .ul-container{
-        display: none;
-    }
-    .burder-bar{
-        display: block;
-    }
-    .burger-img{
-        display: block;
-    }
-    
+.burger-bar .ul-container{
+    list-style-type: none;
+    display: 
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    text-align: center;
 }
-.burger-img:hover{
+.burger-bar .ul-menu{
+    padding: 20px;
+    color: white;
+}
+
+/* 햄버거 바 마우스 올리면 */
+.burger-bar .burger-img:hover{
+    background-color: aqua;
+
+    /* 메뉴가 보여야함 */
+    .burger-bar .ul-container{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 550px){
+    .nav-bar{
+        display: block;
+    }
     .burger-bar{
         display: none;
     }
-    .burger-img{
+}
+/* 화면 줄이면 */
+@media screen and (max-width: 549px){
+    .nav-bar{
         display: none;
     }
-    .ul-container{
-        display:flex;
-        list-style-type: none;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: black;
+    .burger-bar .burger-img{
+        display: flex;
+        margin: auto;
     }
-    .ul-menu{
-        display: block;
-    }
-    .home{
-        display: block;
-    }
-}
+} 
