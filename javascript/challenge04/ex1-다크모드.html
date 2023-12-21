@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다크모드 만들기</title>
+    <style>
+
+        #button__white:hover{
+            cursor: pointer;
+        }
+        #button__black:hover{
+            cursor: pointer;
+        }
+    </style>
+        
+    </style>
+</head>
+<body>
+    <!-- HTML -->
+    <div id="buttons">
+        <div id="button__white">
+            <input type="button" value="white" onclick="changeBackgroundColor('white')">
+        </div>
+        <div id="button__black">
+            <input type="button" value="black" onclick="changeBackgroundColor('black')">
+        </div>
+    </div>
+    
+    <!-- script -->
+    <script>
+        const buttons = document.getElementById("buttons")
+        buttons.style.width = "100px"
+        buttons.style.display = "flex"
+        buttons.style.flexDirection = "row"
+        buttons.style.justifyContent = "space-between"
+        
+        const button_white = document.getElementById("button__white")
+        const button_black = document.getElementById("button__black")
+
+        const body = document.body;
+        
+
+        function changeBackgroundColor(color){
+            body.style.backgroundColor = color;
+        }
+   
+    </script>
+</body>
+</html>
