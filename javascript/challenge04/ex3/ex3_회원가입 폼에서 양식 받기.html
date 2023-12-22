@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>OZ초격차 회원가입</title>
+    <style>
+        #title{
+            padding-top: 100px;
+        }
+        .signin_class{
+            width: 400px;
+            height: 700px;
+            border-style: none;
+            border-radius: 10px 10px 10px 10px;
+            background: rgb(235, 242, 224);
+            box-shadow: 7px 7px rgb(136, 194, 121),
+                        10px 10px rgb(234, 200, 25),
+                        16px 16px rgb(30, 141, 3),
+                        21px 21px rgb(248, 103, 19);
+            text-align:center;
+        }
+        #name, #email, #pw, #re_pw{
+            width: 300px;
+            height: 30px;
+            margin: 0.5em;
+            
+        }
+        #tel01, #tel02, #tel03{
+            width: 78.5px;
+            height: 30px;
+            margin: 0.5em;
+        }
+        .certification{
+            margin-left: 150px;
+        }
+        .certification_complete{
+            margin-left: 180px;
+            margin-top: 20px;
+        }
+        #complete_button{
+            border: 1px solid black;
+            border-radius: 2px;
+            width: 100px;
+        }
+
+        #region{
+            width: 300px;
+            height: 30px;
+            margin-top: 20px;
+            padding-left: 6px;
+
+        }
+        #female, #male{
+            margin-top: 30px;
+        }
+        #signin_button{
+            background: white;
+            border: 1px solid black;
+            padding: 10px 126px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signin_class">
+        <header>
+        <h2 id="title">OZ초격차 회원가입</h2>
+        </header>
+        <form>
+            <section class="user-info-form">
+                <input type="text" class="text_form" id="name" placeholder="이름을 입력하세요." name="signin">
+                <br>
+                <input type="email" class="text_form" id="email" placeholder="이메일을 입력하세요." name="signin">
+                <br>
+                <input type="password" class="text_form" id="pw" placeholder="비밀번호를 입력하세요." name="signin">
+                <br>
+                <input type="password" class="text_form" id="re_pw" placeholder="비밀번호를 다시 입력하세요." name="signin">
+                <br>
+                <section class="text_form">
+                    <input type="tel" id="tel01" name="signin"/>-
+                    <input type="tel" id="tel02" name="signin"/>-
+                    <input type="tel" id="tel03" name="signin"/>
+                </section>
+                
+            </section>
+            <br>
+            <div class="certification">
+                000000 &nbsp; <input type="button" value="인증번호 전송" id="submit_button">
+            </div>
+            <div class="certification_complete">
+                3:00 &nbsp; <input type="button" value="인증 완료" id="complete_button" disabled>
+            </div>
+                
+                <br>
+            </span>
+            <select id="region">
+                <option value="selection" selected disabled>-지역을 선택하세요-</option> 
+                <option value="seoul">서울</option>
+                <option value="kyeonggi">경기</option>
+                <option value="incheon">인천</option>
+                <option value="seoul">충북</option>
+                <option value="seoul">충남</option>
+                <option value="seoul">강원</option>
+                <option value="seoul">경북</option>
+                <option value="seoul">경남</option>
+                <option value="seoul">전북</option>
+                <option value="seoul">전남</option>
+                <option value="seoul">제주</option>
+            </select>
+            <br>
+            <section name="gender">
+                <input type="radio" id="female" value="female" name="gender_">
+                <label for="female">여성</label>
+                <input type="radio" id="male" value="male" name="gender_">
+                <label for="male">남성</label>
+            </section>
+            
+            <button type="submit" id="signin_button" onclick="buttonClick()">가입하기</button>
+        </form>
+    </div>
+
+    <script>
+
+        const body = document.body;
+
+        const input_forms = document.getElementById("name")
+        // 회원가입 버튼 클릭하면 콘솔에 유저 데이터 받아오기
+        //회원가입 버튼 클릭
+        function buttonClick(){
+            //버튼 클릭할 떄 웹 페이지 새로고침 막기
+            event.preventDefault();
+            
+            //text-form
+            //콘솔에 데이터 받아오기
+            //name
+            const name = document.getElementById("name").value;
+            console.log(name)
+            //email
+            const email = document.getElementById("email").value;
+            console.log(email)
+            //pw입력
+            const pw = document.getElementById("pw").value;
+            console.log(pw)
+            //pw확인
+            const re_pw = document.getElementById("re_pw").value;
+            console.log(re_pw)
+            //tel
+            const tel01 = document.getElementById("tel01").value;
+            console.log(tel01)
+            const tel02 = document.getElementById("tel02").value;
+            console.log(tel02)
+            const tel03 = document.getElementById("tel03").value;
+            console.log(tel03)
+            //region
+            const region = document.getElementById("region").value;
+            console.log(region)
+            //gender
+            //성별 라디오 버튼 체크 여부 함수
+            //라디오버튼 그룹 가져오기
+            var radioGroup = document.forms[0]["gender_"];
+
+            var checkedValue_female = false;
+            var checkedValue_male = false;
+            for(let i = 0; i < radioGroup.length; i++){
+                if(radioGroup[i].checked){
+                    if(radioGroup[i].value === "female"){
+                        checkedValue_female = true;
+                    }else if(radioGroup[i].value === "male"){
+                        checkedValue_male = true;
+                    }
+                }
+            }
+            console.log(checkedValue_female);
+            console.log(checkedValue_male);
+             
+        }
+
+       
+    
+
+        
+
+    </script>
+</body>
+</html>
