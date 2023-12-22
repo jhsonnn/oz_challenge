@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐러셀</title>
+    
+    <style>
+        #images{
+            overflow: scroll;
+        }
+        #slider_section{
+            display: flex;
+            /* 슬라이더 이동 트랜지션 설정 */
+            transition: transform 0.5s ease;
+            /* 가운데 정렬 */
+            margin: auto;
+        }
+        .slider{
+            width: 100%;
+            height: 300px;
+            order: 0;
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML -->
+    <div id="container">
+        <div id="images">
+            <div id="slider-section">
+                <img src="images/img01.jpeg" class="slider" id="img01" alt="img01">
+                <img src="images/img02.jpeg" class="slider" id="img02" alt="img02">
+                <img src="images/img03.jpeg" class="slider" id="img03" alt="img03">
+                <img src="images/img04.jpeg" class="slider" id="img04" alt="img04">
+            </div>
+        </div>
+        <div id="buttons">
+            <div id="button_backgroundColor">
+                <input type="button" value="&#9733;" onclick="changeBackgroundColor()">
+            </div>
+            <div>
+                <input type="button" value="화" id="button01" onclick="slideImages(-30)">
+            </div>
+            <div>
+                <input type="button" value="이" id="button02" onclick="slideImages(30)">
+            </div>
+            <div>
+                <input type="button" value="팅" id = "button03" onclick="slideImages(30)">
+            </div>
+            <div>
+                <!-- <input type="button" value="다음" id = "button_next" onclick="slideImages(30)"> -->
+                <input type="button" value="다음" id = "button_next" onclick="nextImage()")">
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script>
+        const body = document.querySelector("body")
+
+        //이미지 & 버튼을 둘러싸는 div
+        const container = document.getElementById("container")
+        container.style.width = "700px"
+        container.style.display = "flex"
+        container.style.flexDirection = "column"
+
+        //이미지 들어가는 곳
+        const images = document.getElementById("images")
+        images.style.width = "500px"
+        images.style.height = "300px"
+        images.style.border = "1px solid black"
+     
+        //이미지 들어가는 곳에서 이미지 슬라이드 되는 div
+        const sliderSection = document.getElementById("slider-section");
+        sliderSection.style.display="flex"
+        sliderSection.style.flexDirection="row"
+
+
+        // 슬라이더 섹션의 너비 계산하여 동적으로 설정
+        const slider = sliderSection.querySelectorAll(".slider");
+        sliderSection.style.width = `${slider.length * 500}px`;
+
+
+         // 슬라이더 이동 효과 설정
+        let currentIndex = 0;
+
+        function slideImages(direction) {
+            currentIndex += direction;
+            // 최대 이동 가능 범위 설정
+            const maxIndex = slider.length - 1;
+            
+            // 인덱스 범위를 벗어나지 않도록 조정
+            currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+
+            // 슬라이더에 transform 속성을 적용하여 이동
+            sliderSection.style.transform = `translateX(-${currentIndex * 500}px)`;
+        }
+
+
+        function nextImage() {
+            // 이미지 하나의 너비만큼 이동
+            slideImages(-500);
+        }
+
+
+        //이미지 중 1번
+        const img01= document.getElementById("img01")
+        img01.style.width = "500px"
+        img01.style.height = "300px"
+        img01.style.order = 1;
+        //이미지 중 2번
+        const img02= document.getElementById("img02")
+        img02.style.width = "500px"
+        img02.style.height = "300px"
+        img02.style.order = 2;
+        //이미지 중 3번
+        const img03= document.getElementById("img03")
+        img03.style.width = "500px"
+        img03.style.height = "300px"
+        img03.style.order = 3;
+        //이미지 중 4번
+        const img04= document.getElementById("img04")
+        img04.style.width = "500px"
+        img04.style.height = "300px"
+        img04.style.order = 4;
+        
+
+        //버튼들어가는 div
+        const buttons = document.getElementById("buttons")
+        buttons.style.display = "flex"
+        buttons.style.flexDirection = "row"
+
+        //별 버튼 누르면 색상 변하는 부분
+        const button_backgroundColor = document.getElementById("button_backgroundColor")
+        
+        function changeBackgroundColor(){
+            // if(body.style.backgroundColor == "white"){
+            //     body.style.backgroundColor = "black"
+            // }else{
+            //     body.style.backgroundColor = "white"
+            // }
+            body.style.backgroundColor = 
+            body.style.backgroundColor === "white" ? "black" : "white";
+        }
+    </script>
+</body>
+</html>
