@@ -1,0 +1,118 @@
+.first-card-shelf{
+    min-height: 100px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    margin-bottom: 60px; 
+}
+.shelf-imgs{
+    width:120px;
+    height:78px;
+}
+.shelf-imgs-name{
+    text-align: center;
+    font-size: 0.9rem;
+}
+.second-card-shelf{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 30px;
+}
+.second-card-shelf>div>#second-card-shelf-title{
+    font-size: 2rem;
+    color: gray;
+    font-weight: 700;
+}
+.second-card-shelf-imgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.second-card-shelf-img-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 5%;
+}
+.second-card-shelf-img{
+    width: 100%;
+    height: auto;
+}
+.second-card-shelf-text{
+    position: absolute;
+    color:white;
+    z-index: 1;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.second-card-shelf-text__black{
+    position: absolute;
+    color:black;
+    z-index: 1;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.second-card-shelf-name{
+    font-size: 0.8rem;
+}
+.second-card-shelf-feature{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.second-card-shelf-price{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+
+.third-card-shelf{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 30px;
+}
+.third-card-shelf>div>#third-card-shelf-title{
+    font-size: 2rem;
+    color: gray;
+    font-weight: 700;
+    margin-top: 100px;
+}
+.third-card-shelf-imgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.third-card-shelf-img-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 5%;
+}
+.third-card-shelf-img{
+    width: 100%;
+    height: auto;
+}
+.third-card-shelf-text{
+    position: absolute;
+    color:white;
+    z-index: 1;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.third-card-shelf-text__black{
+    position: absolute;
+    color:black;
+    z-index: 1;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.third-card-shelf-name{
+    font-size: 0.8rem;
+}
+.third-card-shelf-feature{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.third-card-shelf-price{
+    font-size: 1.1rem;
+    font-weight: 400;
+}

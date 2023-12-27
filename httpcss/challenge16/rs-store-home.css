@@ -1,0 +1,6 @@
+.rs-storehome{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    
+}

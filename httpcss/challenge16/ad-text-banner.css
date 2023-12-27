@@ -1,0 +1,32 @@
+.ad-text-banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: grey;
+
+    height: 258px;
+}
+.ad-text-banner>#ad-text-left{
+    width: 80%;
+}
+.ad-text-banner>#ad-pic-right{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+#applestore_img{
+    width: 40px;
+    height: 40px;
+}
+.ad-text-banner>#ad-pic-right>#first-row__specialist{
+    display: flex;
+    flex-direction: row;
+}
+.ad-text-banner>#ad-pic-right>#second-row__nearest_store{
+    display: flex;
+    flex-direction: row;
+}
+

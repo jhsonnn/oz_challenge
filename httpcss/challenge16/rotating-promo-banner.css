@@ -1,0 +1,16 @@
+.rotating-promo-banner-wrapper{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    height: 80px;
+}
+.banner-content>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.banner-content>div>#text-bottomP{
+   margin: 0;
+}

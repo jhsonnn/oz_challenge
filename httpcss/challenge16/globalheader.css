@@ -1,0 +1,81 @@
+html{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-color: rgb(241, 241, 241);
+}
+.flex{
+    display: flex;
+}
+header .globarheader{
+    display: flex;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    color: black;
+}
+.header-content{
+    width: 100%;
+    max-width: 70rem;
+    height: 2.5rem;
+    padding: 0.5rem 0.8rem;
+    margin: auto;
+
+    font-size: 0.9rem;
+    justify-content: space-evenly;
+    /* flex-shrink: none; */
+}
+.header-content__logo{
+    font-weight: 700;
+    margin-left: 5px;
+    line-height: 32px;
+    align-items: center;
+}
+.header-content__nav{
+    justify-content:space-around;
+    align-items: center;
+    align-content: center;
+    flex-grow: 0.8;
+    
+}
+.header-content__nav ul{
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 15px;
+}
+.header-content__nav ul li{
+    margin-left : 20px;
+   
+    /* flex: 1; */
+}
+.header-content__icon{
+    justify-content: center;
+    align-items: center;
+    float:right;
+}
+.icon_search{
+    margin-right: 18px;
+}
+.rotating-promo-banner-wrapper{
+    height: 80px;
+    background-color: white;
+    font-size: 0.9rem;
+}
+.rs-storehome::before{
+    
+}
+.rs-storehome::after{
+
+}
+/* width: 834px 보다 크면 메뉴전체 펼쳐짐
+작으면 메뉴 전체 없고, 돋보기 장바구니, 햄버거버튼 생성*/
