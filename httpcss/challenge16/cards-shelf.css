@@ -80,7 +80,7 @@
 .third-card-shelf-imgs{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .third-card-shelf-img-container{
     position: relative;
@@ -91,6 +91,7 @@
     width: 100%;
     height: auto;
 }
+
 .third-card-shelf-text{
     position: absolute;
     color:white;
@@ -98,21 +99,56 @@
     margin-left: 25px;
     margin-top: 20px;
 }
-.third-card-shelf-text__black{
+.third-card-shelf-img1-text{
     position: absolute;
     color:black;
-    z-index: 1;
+    margin-top: 30px;
     margin-left: 25px;
+}
+.third-card-shelf-img1-text>.third-card-shelf-text1{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.third-card-shelf-img2-box{
+    width: 310px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+#third-card-shelf-img2{
+    margin-top: 80px;
+}
+.third-card-shelf-img2_text{
+    color:black;
+    margin-left: -80px;
     margin-top: 20px;
 }
-.third-card-shelf-name{
-    font-size: 0.8rem;
+
+.third-card-shelf-img2_text>.third-card-shelf-new{
+    font-size: 0.9rem;
+    color: rgb(218, 142, 2);
 }
-.third-card-shelf-feature{
-    font-size: 1.5rem;
+.third-card-shelf-img2_text>.third-card-shelf-name{
+    font-size: 1.1rem;
     font-weight: 600;
 }
-.third-card-shelf-price{
-    font-size: 1.1rem;
-    font-weight: 400;
+.third-card-shelf-img2_text>.third-card-shelf-price{
+    margin-top: 30px;
+}
+
+.third-card-shelf-img3-box{
+    width: 310px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
 }
