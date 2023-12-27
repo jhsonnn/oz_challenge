@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미스테리 숫자 맞추기</title>
+</head>
+<body>
+    <h1 id="title">Mystery Number 맞추기</h1>
+    <br>
+    <div id="container">
+        <div id="top">
+            <p>1부터 100사이의 숫자를 입력하세요!</p>
+        </div>
+        <div id="middle">
+            <div>
+                <input type="inputNum" id="inputNum">
+                <input type="button" id="btn" value="뚜둥!">
+            </div>
+            <div>
+                <input type="button" id="restartBtn" value="다시하기"> 
+            </div>
+        </div>
+        <div id="bottom">
+            <p id="hint"> </p>
+        </div>
+    </div>
+    
+    <script>
+        const body = document.body;
+        body.style.backgroundColor = "#222222"
+        body.style.color="white"
+        const h1 = document.getElementById("title")
+        h1.style.textAlign="center"
+        const container = document.getElementById("container")
+        container.style.textAlign="center"
+
+        const inputNum = document.getElementById("inputNum")
+        inputNum.style.width ="150px"
+        inputNum.style.height = "30px"
+        inputNum.style.fontSize ="20px"
+        inputNum.style.textAlign="center"
+
+        const btn = document.getElementById("btn")
+        btn.style.height="40px"
+        btn.style.width ="100px"
+        btn.style.borderColor ="orange"
+        btn.style.color="orange"
+        btn.style.backgroundColor="transparent"
+        btn.style.borderRadius="5px"
+        btn.style.marginLeft="10px"
+
+        const hintP = document.getElementById("hint")
+        hintP.style.color = "white"
+        
+        var num = randomNumber()
+        function randomNumber(){
+            num = Math.floor(Math.random()*100)+1
+            return num;
+        }
+
+        btn.addEventListener("click", function(event){
+            // alert("버튼 클릭됨")
+            event.preventDefault()
+            console.log(num)
+            const inputNumValue = parseInt(inputNum.value)
+            console.log(inputNumValue)
+            if(num>inputNumValue){
+                hintP.textContent="힌트: 숫자가 너무 작아요! 조금 더 높여보세요!"
+                
+            }else if(inputNumValue>num){
+                hintP.textContent="힌트: 숫자가 커요! 줄여볼까요?"
+                
+            }else if(inputNumValue===num){
+                hintP.textContent="";
+                var clap = "\uD83D\uDC4F";
+                setTimeout(function(){
+                    alert(clap+clap+clap+""+"좀 잘 찍네? 정답!!!")
+                }, 100);
+
+                restartBtn.style.display ="inline"
+                restartBtn.style.textAlign="center"
+            }
+        })
+
+        const restartBtn = document.getElementById("restartBtn")
+        // restartBtn.style.display ="none"
+        restartBtn.style.margin="20px"
+        restartBtn.style.width="100px"
+        restartBtn.style.height="50px"
+        restartBtn.style.display="none"
+
+        restartBtn.addEventListener("click", function(event){
+            num = randomNumber()
+            inputNum.value=""
+            hintP.textContent=""
+            restartBtn.style.display ="none"
+        })
+
+    </script>
+</body>
+</html>
