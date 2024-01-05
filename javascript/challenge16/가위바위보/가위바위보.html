@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper Scissors</title>
+    
+    <style>
+        .inputArea{
+            display: flex;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>가위바위보 게임</h1>
+    <p>가위, 바위, 보 중 하나를 입력하세요:</p>
+    <div class="inputArea">
+        <input id="input">
+        <input id="resultBtn" type="button" value="결과 확인">
+    </div>
+    <div>당신의 선택: <span id="playerChoiceText"></span>
+         / 컴퓨터의 선택: <span id="computerChoiceText"></span>
+         / 결과: <span id="result"></span>
+        </div>
+
+    <script src="가위바위보.js"></script>
+</body>
+</html>
