@@ -5,9 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이미지 멈춰!</title>
+
+    <style>
+        .container{
+            width: 800px;
+            height: 500px;
+        }
+        #images{
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     
+    <div class="container">
+        <div id="images">
+        </div>
+    </div>
+    <div>
+        <input id="stopBtn" type="button" value="멈춰">
+    </div>
+
     <script src="이미지멈춰.js"></script>
 </body>
 </html>
