@@ -24,6 +24,9 @@
             this.queue.push(item);
         };
         GenericQueue.prototype.dequeue = function () {
+            if (!this.queue.length) {
+                return undefined;
+            }
             return this.queue.shift();
         };
         GenericQueue.prototype.peek = function () {
@@ -42,7 +45,10 @@
     testQueue.enqueue("coding"); // GenericQueue { queue: [ 'coding' ] }
     testQueue.enqueue("so fun"); //GenericQueue { queue: [ 'coding', 'so fun' ] }
     testQueue.dequeue(); //GenericQueue { queue: [ 'so fun' ] }
-    testQueue.enqueue("exciting"); //GenericQueue { queue: [ 'so fun', 'exciting' ] }
-    console.log(testQueue.peek()); // so fun
-    console.log(testQueue.size()); // 2
+    testQueue.dequeue(); //GenericQueue { queue: [] }
+    console.log(testQueue.dequeue()); //undefined
+    testQueue.enqueue("exciting"); //GenericQueue { queue: [ 'exciting' ] }
+    console.log(testQueue); //
+    console.log(testQueue.peek()); // exciting
+    console.log(testQueue.size()); // 1
 }
