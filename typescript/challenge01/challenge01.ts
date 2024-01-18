@@ -24,6 +24,9 @@
             this.queue.push(item);
         }
         dequeue(): T | undefined{
+            if(!this.queue.length){
+                return undefined;
+            }
             return this.queue.shift();
         }
         peek(): T | undefined{
