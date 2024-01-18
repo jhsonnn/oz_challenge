@@ -44,5 +44,5 @@
     testQueue.dequeue(); //GenericQueue { queue: [ 'so fun' ] }
     testQueue.enqueue("exciting"); //GenericQueue { queue: [ 'so fun', 'exciting' ] }
     console.log(testQueue.peek()); // so fun
-    console.log(testQueue.size());
+    console.log(testQueue.size()); // 2
 }
