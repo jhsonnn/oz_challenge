@@ -1,3 +1,4 @@
+"use strict";
 {
     /*
     문제
@@ -16,39 +17,37 @@
     3. peek(): 현재 큐에 맨 앞에 있는 아이템을 반환합니다
     4. size(): 큐의 현재 크기 반환
     */
-    var GenericQueue = /** @class */ (function () {
-        function GenericQueue() {
+    class GenericQueue {
+        constructor() {
             this.queue = [];
         }
-        GenericQueue.prototype.enqueue = function (item) {
+        enqueue(item) {
             this.queue.push(item);
-        };
-        GenericQueue.prototype.dequeue = function () {
+        }
+        dequeue() {
             if (!this.queue.length) {
                 return undefined;
             }
             return this.queue.shift();
-        };
-        GenericQueue.prototype.peek = function () {
+        }
+        peek() {
             if (!this.queue.length) {
                 return undefined;
             }
             return this.queue[0];
-        };
-        GenericQueue.prototype.size = function () {
+        }
+        size() {
             var _a;
             return (_a = this.queue) === null || _a === void 0 ? void 0 : _a.length;
-        };
-        return GenericQueue;
-    }());
-    var testQueue = new GenericQueue();
+        }
+    }
+    const testQueue = new GenericQueue();
     testQueue.enqueue("coding"); // GenericQueue { queue: [ 'coding' ] }
     testQueue.enqueue("so fun"); //GenericQueue { queue: [ 'coding', 'so fun' ] }
     testQueue.dequeue(); //GenericQueue { queue: [ 'so fun' ] }
     testQueue.dequeue(); //GenericQueue { queue: [] }
     console.log(testQueue.dequeue()); //undefined
     testQueue.enqueue("exciting"); //GenericQueue { queue: [ 'exciting' ] }
-    console.log(testQueue); //
-    console.log(testQueue.peek()); // exciting
-    console.log(testQueue.size()); // 1
+    console.log(testQueue.peek()); //exciting
+    console.log(testQueue.size()); //1
 }
