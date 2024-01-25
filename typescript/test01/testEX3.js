@@ -1,17 +1,26 @@
-// 문제: 제네릭 클래스 Item<T>를 구현하고, 
-// 문자열 타입의 값을 저장 및 반환하는 코드를 작성하세요.
-var Item = /** @class */ (function () {
-    function Item() {
+"use strict";
+{
+    //Continent 클래스를 확장하고
+    //CountryInterface 인터페이스를 구현하는 Country 클래스를 만듭니다.
+    //Country 클래스에는 countryName이라는 public 속성을 포함하고, 
+    //CountryInterface에 정의된 메서드를 구현하세요.
+    //이를 통해 클래스의 확장과 인터페이스 구현 순서의 중요성을 이해해보세요.
+    class Continent {
+        constructor(name) {
+            this.continentName = name;
+        }
     }
-    Item.prototype.save = function (item) {
-        this.strItem = item;
-    };
-    Item.prototype.getItem = function () {
-        return "".concat(this.strItem);
-    };
-    return Item;
-}());
-// 여기에 Item<string> 클래스의 인스턴스를 생성하고 사용하는 코드를 작성하세요.
-var instanceItem = new Item();
-instanceItem.save("saveItem");
-console.log(instanceItem.getItem());
+    // 여기에 Country 클래스를 Continent 클래스로부터 확장하고 
+    // CountryInterface 인터페이스를 구현하세요.
+    class Country extends Continent {
+        constructor(continentName, countryName) {
+            super(continentName);
+            this.countryName = countryName;
+        }
+        getCountryInfo() {
+            return `${this.countryName}, ContinentName: ${this.continentName}`;
+        }
+    }
+    let southKorea = new Country("SouthKorea", "Asia");
+    console.log(southKorea.getCountryInfo());
+}

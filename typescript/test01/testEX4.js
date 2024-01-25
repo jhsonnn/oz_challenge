@@ -1,3 +1,4 @@
+"use strict";
 {
     // 문제: 제네릭 함수 getFirstElement를 구현하고,
     //문자열 배열에서 첫 번째 요소를 반환하는 코드를 작성하세요.
@@ -150,26 +151,25 @@
     //Queue 클래스를 사용하여 문자열 요소를 큐에 추가하고 제거하는 코드를 작성하세요.
     // push 메서드로 새로운 요소를 큐의 뒤쪽에 추가하고, shift 메서드로 가장 앞쪽의 요소, 즉 가장 오래된 요소를 제거합니다.
     // 여기에 Queue<T> 클래스를 구현하세요.
-    var Queue = /** @class */ (function () {
-        function Queue() {
+    class Queue {
+        constructor() {
             this.arr = [];
         }
-        Queue.prototype.enqueue = function (element) {
+        enqueue(element) {
             this.arr.push(element);
-        };
-        Queue.prototype.dequeue = function () {
+        }
+        dequeue() {
             return this.arr.shift();
-        };
-        Queue.prototype.size = function () {
+        }
+        size() {
             var _a;
             return (_a = this.arr) === null || _a === void 0 ? void 0 : _a.length;
-        };
-        return Queue;
-    }());
+        }
+    }
     // 사용 예시
-    var queue = new Queue();
+    const queue = new Queue();
     queue.enqueue("Apple");
     queue.enqueue("Banana");
     console.log(queue.dequeue()); // Apple
-    console.log("Queue size: ".concat(queue.size())); // Queue size: 1
+    console.log(`Queue size: ${queue.size()}`); // Queue size: 1
 }
